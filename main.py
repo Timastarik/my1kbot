@@ -26,8 +26,7 @@ def start_message(message):
       btn1 = types.KeyboardButton("Да")
       btn2 = types.KeyboardButton("Нет")
       markup.add(btn1, btn2)
-      hi=bot.send_message(message.chat.id, f"💭 Здравствуйте, {message.from_user.username}!\nХотите сделать набор на отзывы?".format(message.from_user),reply_markup=markup)
-      
+      hi=bot.send_message(message.chat.id, f"💭 Здравствуйте, {message.from_user.username}!\nХотите сделать набор на отзывы?".format(message.from_user),reply_markup=markup)    
       obrobot.close()
       bot.register_next_step_handler(hi,yes)
     else:       
